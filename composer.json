@@ -1,0 +1,20 @@
+{
+    "name": "hexlet/code",
+    "type": "project",
+    "description": "First education project",
+    "autoload": {
+        "psr-4": {
+            "Hexlet\\Code\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Alexey Z.",
+            "email": "axfz@ya.ru"
+        }
+    ],
+    "bin": [
+	    "bin/brain-games"
+    ],
+    "require": {}
+}
