@@ -3,3 +3,4 @@
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/e463d263e12b16a4cedd/maintainability)](https://codeclimate.com/github/AXFZ123/php-project-45/maintainability)
 
+[Asciinema](https://asciinema.org/a/ZJ5oNFjKKrFoTTuZb3WC6FOJA)
