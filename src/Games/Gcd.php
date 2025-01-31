@@ -8,7 +8,6 @@ function run() {
     line("Find the greatest common divisor of given numbers.");
     $a = rand(1, 10) * rand(1, 10);
     $b = rand(1, 10) * rand(1, 10);
-
     $question = "$a $b";
     $correctAnswer = getGcd($a, $b);
     $result = [

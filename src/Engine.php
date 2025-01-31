@@ -5,6 +5,7 @@ namespace BrainGames\Engine;
 use BrainGames\Games\Even;
 use BrainGames\Games\Calc;
 use BrainGames\Games\Gcd;
+use BrainGames\Games\Progression;
 
 use function cli\line;
 use function cli\prompt;
@@ -19,7 +20,8 @@ function runGame($gameType)
         $result = match($gameType) {
             'even' => Even\run(),
             'calc' => Calc\run(),
-            'gcd' => Gcd\run()
+            'gcd' => Gcd\run(),
+            'progression' => Progression\run()            
         };
         line("Question: %s", $result['question']);
         $answer = prompt("Your answer");
