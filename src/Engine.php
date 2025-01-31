@@ -6,6 +6,7 @@ use BrainGames\Games\Even;
 use BrainGames\Games\Calc;
 use BrainGames\Games\Gcd;
 use BrainGames\Games\Progression;
+use BrainGames\Games\Prime;
 
 use function cli\line;
 use function cli\prompt;
@@ -21,7 +22,8 @@ function runGame($gameType)
             'even' => Even\run(),
             'calc' => Calc\run(),
             'gcd' => Gcd\run(),
-            'progression' => Progression\run()            
+            'progression' => Progression\run(),
+            'prime' => Prime\run()
         };
         line("Question: %s", $result['question']);
         $answer = prompt("Your answer");
