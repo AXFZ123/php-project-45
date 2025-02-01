@@ -4,7 +4,8 @@ namespace BrainGames\Games\Gcd;
 
 use function cli\line;
 
-function run() {
+function run()
+{
     line("Find the greatest common divisor of given numbers.");
     $a = rand(1, 10) * rand(1, 10);
     $b = rand(1, 10) * rand(1, 10);
@@ -17,7 +18,8 @@ function run() {
     return $result;
 }
 
-function getGcd($a, $b) {
+function getGcd($a, $b)
+{
     $gcd = 1;
     $min = min($a, $b);
     for ($i = 1; $i <= $min; $i++) {

@@ -17,8 +17,8 @@ function runGame($gameType)
     $name = prompt('May I have your name?');
     line("Hello, %s!", $name);
 
-    for($i = 0; $i < 3; $i++) {
-        $result = match($gameType) {
+    for ($i = 0; $i < 3; $i++) {
+        $result = match ($gameType) {
             'even' => Even\run(),
             'calc' => Calc\run(),
             'gcd' => Gcd\run(),

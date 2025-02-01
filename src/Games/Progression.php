@@ -4,10 +4,11 @@ namespace BrainGames\Games\Progression;
 
 use function cli\line;
 
-function run() {
+function run()
+{
     line("What number is missing in the progression?");
     $progression = [];
-    $start = rand (1, 30);
+    $start = rand(1, 30);
     $step = rand(2, 10);
     $maxIndex = rand(4, 9);
     $missedIndex = rand(0, $maxIndex);

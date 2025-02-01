@@ -4,7 +4,8 @@ namespace BrainGames\Games\Even;
 
 use function cli\line;
 
-function run() {
+function run()
+{
     line('Answer "yes" if the number is even, otherwise answer "no".');
     $number = rand(1, 99);
     $correctAnswer = ['yes', 'no'][$number & 1];
