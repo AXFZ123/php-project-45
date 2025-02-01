@@ -23,7 +23,8 @@ function runGame(string $gameType)
             'calc' => Calc\run(),
             'gcd' => Gcd\run(),
             'progression' => Progression\run(),
-            'prime' => Prime\run()
+            'prime' => Prime\run(),
+            default => throw new \Exception('Unsupported game')
         };
         line("Question: %s", $result['question']);
         $answer = prompt("Your answer");
