@@ -18,7 +18,7 @@ function run()
     return $result;
 }
 
-function getGcd($a, $b)
+function getGcd(int $a, int $b)
 {
     $gcd = 1;
     $min = min($a, $b);

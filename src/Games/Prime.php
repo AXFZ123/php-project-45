@@ -14,7 +14,7 @@ function run()
     } else {
         do {
             $question = rand(2, 99);
-        } while (in_array($question, $primeList));
+        } while (in_array($question, $primeList, true));
         $correctAnswer = 'no';
     }
     $result = [
