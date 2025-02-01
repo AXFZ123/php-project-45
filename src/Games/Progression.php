@@ -14,9 +14,9 @@ function run() {
     for ($i = 0; $i <= $maxIndex; $i++) {
         $progression[] = $start + $i * $step;
     }
-    $question = implode(' ', array_slice($progression, 0, $missedIndex)) . ' .. '
-    . implode(' ', array_slice($progression, $missedIndex + 1, $maxIndex));
     $correctAnswer = $progression[$missedIndex];
+    $progression[$missedIndex] = '..';
+    $question = implode(' ', $progression);
     $result = [
         'question' => $question,
         'correctAnswer' => $correctAnswer
