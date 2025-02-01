@@ -8,6 +8,14 @@ cd php-project-45
 make install
 ```
 
+## Play
+
+* ```make brain-even```
+* ```make brain-calc```
+* ```make brain-gcd```
+* ```make brain-progression```
+* ```make brain-prime```
+
 ## Demo
 
 * [**brain-even**](https://asciinema.org/a/pQExeLU3ldyP3yi6pSQ1K2wjC)
