@@ -30,7 +30,8 @@ function run(): void
     Engine\runGame($tasks, TASK_MESSAGE, NUMBER_OF_CYCLES);
 }
 
-function getPrimeAndNotPrimeNumbers(int $limit): array {
+function getPrimeAndNotPrimeNumbers(int $limit): array
+{
     $prime = [];
     $notPrime = [];
     for ($i = 2; $i <= $limit; $i++) {
