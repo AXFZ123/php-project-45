@@ -2,39 +2,24 @@
 
 namespace BrainGames\Engine;
 
-use BrainGames\Games\Even;
-use BrainGames\Games\Calc;
-use BrainGames\Games\Gcd;
-use BrainGames\Games\Progression;
-use BrainGames\Games\Prime;
-
 use function cli\line;
 use function cli\prompt;
 
-function runGame(string $gameType)
+function runGame(array $tasks, string $taskMessage, int $numberOfCycles)
 {
     line('Welcome to the Brain Games!');
     $name = prompt('May I have your name?');
     line("Hello, %s!", $name);
-
-    for ($i = 0; $i < 3; $i++) {
-        $result = match ($gameType) {
-            'even' => Even\run(),
-            'calc' => Calc\run(),
-            'gcd' => Gcd\run(),
-            'progression' => Progression\run(),
-            'prime' => Prime\run(),
-            default => throw new \Exception('Unsupported game')
-        };
-        line("Question: %s", $result['question']);
+    line($taskMessage);
+    for ($i = 0; $i < $numberOfCycles; $i++) {
+        line("Question: %s", $tasks[$i]['question']);
         $answer = prompt("Your answer");
-        if ($answer === (string) $result['correctAnswer']) {
-            line("Correct!");
-        } else {
-            line("'{$answer}' is wrong answer ;(. Correct answer was '{$result['correctAnswer']}'.");
+        if ($answer !== (string) $tasks[$i]['correctAnswer']) {
+            line("'{$answer}' is wrong answer ;(. Correct answer was '{$tasks[$i]['correctAnswer']}'.");
             line("Let's try again, {$name}!");
-            exit();
+            return false;
         }
+        line("Correct!");
     }
-    line("Congratulations, {$name}!");
+    line("Congratulations, $name!");
 }

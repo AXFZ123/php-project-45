@@ -4,6 +4,6 @@
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-use function BrainGames\Engine\runGame;
+use function BrainGames\Games\Gcd\run;
 
-runGame('gcd');
+run();

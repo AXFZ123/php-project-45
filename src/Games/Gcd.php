@@ -2,28 +2,35 @@
 
 namespace BrainGames\Games\Gcd;
 
-use function cli\line;
+use BrainGames\Engine;
 
-function run()
+const NUMBER_OF_CYCLES = 3;
+const TASK_MESSAGE = 'Find the greatest common divisor of given numbers.';
+const MAX_COEFFICIENT = 10;
+
+function run(): void
 {
-    line("Find the greatest common divisor of given numbers.");
-    $a = rand(1, 10) * rand(1, 10);
-    $b = rand(1, 10) * rand(1, 10);
-    $question = "$a $b";
-    $correctAnswer = getGcd($a, $b);
-    $result = [
-        'question' => $question,
-        'correctAnswer' => $correctAnswer
-    ];
-    return $result;
+    global $config;
+    print_r($config);
+    $tasks = [];
+    for ($i = 0; $i < NUMBER_OF_CYCLES; $i++) {
+        $a = rand(1, MAX_COEFFICIENT) * rand(1, MAX_COEFFICIENT);
+        $b = rand(1, MAX_COEFFICIENT) * rand(1, MAX_COEFFICIENT);
+        $question = "$a $b";
+        $correctAnswer = getGcd($a, $b);
+        $tasks[] = [
+            'question' => $question,
+            'correctAnswer' => $correctAnswer
+        ];
+    }
+    Engine\runGame($tasks, TASK_MESSAGE, NUMBER_OF_CYCLES);
 }
 
-function getGcd(int $a, int $b)
+function getGcd(int $a, int $b): int
 {
-    $gcd = 1;
-    $min = min($a, $b);
-    for ($i = 1; $i <= $min; $i++) {
-        $a % $i === 0 && $b % $i === 0 ? $gcd = $i : null;
+    if ($b === 0) {
+        return abs($a);
+    } else {
+        return getGcd($b, $a % $b);
     }
-    return $gcd;
 }
