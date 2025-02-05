@@ -34,7 +34,7 @@ function calculate(int $a, int $b, string $operand): int
         '-' => $a - $b,
         '+' => $a + $b,
         '*' => $a * $b,
-        default => throw new \Exception('Undefined operand')
+        default => throw new \Exception('Undefined operator')
     };
     return $result;
 }
