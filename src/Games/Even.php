@@ -2,7 +2,7 @@
 
 namespace BrainGames\Games\Even;
 
-use BrainGames\Engine;
+use function BrainGames\Engine\runGame;
 
 const NUMBER_OF_CYCLES = 3;
 const TASK_MESSAGE = 'Answer "yes" if the number is even, otherwise answer "no".';
@@ -19,7 +19,7 @@ function run(): void
             'correctAnswer' => $correctAnswer
         ];
     }
-    Engine\runGame($tasks, TASK_MESSAGE, NUMBER_OF_CYCLES);
+    runGame($tasks, TASK_MESSAGE, NUMBER_OF_CYCLES);
 }
 
 function isEven(int $number): bool

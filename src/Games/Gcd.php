@@ -2,7 +2,7 @@
 
 namespace BrainGames\Games\Gcd;
 
-use BrainGames\Engine;
+use function BrainGames\Engine\runGame;
 
 const NUMBER_OF_CYCLES = 3;
 const TASK_MESSAGE = 'Find the greatest common divisor of given numbers.';
@@ -23,7 +23,7 @@ function run(): void
             'correctAnswer' => $correctAnswer
         ];
     }
-    Engine\runGame($tasks, TASK_MESSAGE, NUMBER_OF_CYCLES);
+    runGame($tasks, TASK_MESSAGE, NUMBER_OF_CYCLES);
 }
 
 function getGcd(int $a, int $b): int

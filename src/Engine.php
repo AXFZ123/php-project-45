@@ -5,7 +5,7 @@ namespace BrainGames\Engine;
 use function cli\line;
 use function cli\prompt;
 
-function runGame(array $tasks, string $taskMessage, int $numberOfCycles)
+function runGame(array $tasks, string $taskMessage, int $numberOfCycles): void
 {
     line('Welcome to the Brain Games!');
     $name = prompt('May I have your name?');
@@ -17,7 +17,7 @@ function runGame(array $tasks, string $taskMessage, int $numberOfCycles)
         if ($answer !== (string) $tasks[$i]['correctAnswer']) {
             line("'{$answer}' is wrong answer ;(. Correct answer was '{$tasks[$i]['correctAnswer']}'.");
             line("Let's try again, {$name}!");
-            return false;
+            return;
         }
         line("Correct!");
     }
