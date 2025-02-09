@@ -24,7 +24,7 @@ function run(): void
             'correctAnswer' => $correctAnswer
         ];
     }
-    runGame($tasks, TASK_MESSAGE, NUMBER_OF_CYCLES);
+    runGame($tasks, TASK_MESSAGE);
 }
 
 function calculate(int $a, int $b, string $operator): int
