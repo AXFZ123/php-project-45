@@ -28,8 +28,8 @@ make install
 
 ## Demo
 
-* [**brain-even**](https://asciinema.org/a/pQExeLU3ldyP3yi6pSQ1K2wjC)
-* [**brain-calc**](https://asciinema.org/a/CQeEQqvAhcEjSeiWrBE2qNcPb)
-* [**brain-gcd**](https://asciinema.org/a/hmFyYQc9VEowdQyDOZFthpKzw)
-* [**brain-progression**](https://asciinema.org/a/Gqx0QVm3oKGizfEFbLYUiKNDV)
-* [**brain-prime**](https://asciinema.org/a/LH3uEhFzqhqgSEgUmvoyMduxG)
+* [**brain-even**](https://asciinema.org/a/B35jrmiEDU7bv0o4ixaIcjA3L)
+* [**brain-calc**](https://asciinema.org/a/kSOxaXzKhjoxxVgUqy6QcOxvL)
+* [**brain-gcd**](https://asciinema.org/a/DnWyg2LKZBsXN4QLuZk5UM8W5)
+* [**brain-progression**](https://asciinema.org/a/TQjHsXKB0eUau2ld77Pj8wxnZ)
+* [**brain-prime**](https://asciinema.org/a/ee396EvF5LF2cvZl0VQQBgmGv)
